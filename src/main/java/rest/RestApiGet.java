@@ -15,7 +15,7 @@ public class RestApiGet {//подключиться как клиент отпр
     public static String getWeather(String url) {
 
         String stringResponse;
-        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+        CloseableHttpClient httpClient = HttpClientBuilder.create().build();//создаём клиента
         try {
             response = httpClient.execute(new HttpGet(url));
 //            System.out.println(response.toString());

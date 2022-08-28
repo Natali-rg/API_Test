@@ -4,11 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
+import rest.exchangeRates.ExchangeRates;
 import rest.weather.WeatherObject;
 
 public class RestApiTest {
-    String url="https://goweather.herokuapp.com/weather/",
-    city="dnipro";
+    String url="https://goweather.herokuapp.com/weather/";
+    String url1="https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=EUR&json";
+    String city="dnipro";
     @Test
     public void Test(){
         String s=RestApiGet.getWeather(url+city);
@@ -31,4 +33,7 @@ public class RestApiTest {
         WeatherObject myObject=new ObjectMapper().readValue(s,WeatherObject.class);
         System.out.println(myObject.description);
     }
+
+
+
 }
