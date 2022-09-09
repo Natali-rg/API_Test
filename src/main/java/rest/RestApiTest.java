@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
-import rest.exchangeRates.ExchangeRates;
 import rest.weather.WeatherObject;
 
 public class RestApiTest {
